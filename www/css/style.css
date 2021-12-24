@@ -1050,7 +1050,8 @@ a.card-content {
 
 .navbar {
   padding: 10px 15px;
-  height: 60px;
+  /* Alain changed it to 70px to solve iOS issues. It was 60px*/
+  height: 70px;
 }
 
 .navbar .navbar-bg {
@@ -1798,3 +1799,107 @@ label.small {
 .calendar .calendar-week-header .calendar-week-day {
   padding: 10px 0;
 }
+
+
+/* added by Alain */
+	#c_container {
+	  margin-left: 25%;
+	  padding-top: 40px;
+	  width: 200px;
+	  height: 100px;
+	  overflow: hidden;
+	  position: absolute;
+	  top: 10px;
+	  left: 10px;
+	}
+	#c_loader {
+	  width: 200px;
+	  height: 200px;
+	  border-style: solid;
+	  border-top-color: black;
+	  border-right-color: black;
+	  border-left-color: transparent;
+	  border-bottom-color: transparent;
+	  border-radius: 50%;
+	  box-sizing: border-box;
+	  animation: rotate 4s ease-in-out infinite;
+	  transform: rotate(-200deg)
+	}
+	@keyframes rotate {
+	  0% { border-width: 10px; }
+	  25% { border-width: 3px; }
+	  50% { 
+		transform: rotate(115deg); 
+		border-width: 10px;
+	  }
+	  75% { border-width: 3px;}
+	  100% { border-width: 10px;}
+	}
+
+
+
+	.myloading:after {
+	  content: ' .';
+	  animation: mydots 3s steps(5, end) infinite;}
+	
+	@keyframes mydots {
+	  0%, 20% {
+		color: rgba(0,0,0,0);
+		text-shadow:
+		  .25em 0 0 rgba(0,0,0,0),
+		  .5em 0 0 rgba(0,0,0,0);}
+	  40% {
+		color: black;
+		text-shadow:
+		  .25em 0 0 rgba(0,0,0,0),
+		  .5em 0 0 rgba(0,0,0,0);}
+	  60% {
+		text-shadow:
+		  .25em 0 0 black,
+		  .5em 0 0 rgba(0,0,0,0);}
+	  80%, 100% {
+		text-shadow:
+		  .25em 0 0 black,
+		  .5em 0 0 black;}}
+
+	.alainButtonDisabled{
+		border: 1px solid #999999;background-color: #cccccc;color: #666666;
+	}
+	
+	
+	.myrate {
+		float: left;
+		height: 46px;
+		padding: 0 10px;
+	}
+	.myrate:not(:checked) > input {
+		position:absolute;
+		top:-9999px;
+	}
+	.myrate:not(:checked) > label {
+		float:right;
+		width:1em;
+		overflow:hidden;
+		white-space:nowrap;
+		cursor:pointer;
+		font-size:30px;
+		color:#ccc;
+	}
+	.myrate:not(:checked) > label:before {
+		content: '★ ';
+	}
+	.myrate > input:checked ~ label {
+		color: #ffc700;    
+	}
+	.myrate:not(:checked) > label:hover,
+	.myrate:not(:checked) > label:hover ~ label {
+		color: #deb217;  
+	}
+	.myrate > input:checked + label:hover,
+	.myrate > input:checked + label:hover ~ label,
+	.myrate > input:checked ~ label:hover,
+	.myrate > input:checked ~ label:hover ~ label,
+	.myrate > label:hover ~ input:checked ~ label {
+		color: #c59b08;
+	}
+	

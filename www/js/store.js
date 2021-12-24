@@ -1,3 +1,4 @@
+// not sure what this is but let's keep it...
 var store = Framework7.createStore({
   state: {
     firstName: 'John',

@@ -1,4 +1,4 @@
-var static = "Mobileux-v2";
+var static = "Shop App";
 var cacheassets = [
     "/index.html",
     "/css/style.css",

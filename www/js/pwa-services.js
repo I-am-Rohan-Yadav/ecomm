@@ -7,7 +7,9 @@ if ("serviceWorker" in navigator) {
             //.register("https://maxartkiller.com/website/mobileux2/Framework7/serviceWorker.js", {
                 scope: './'
             })
-            .then(reg => console.log("service worker registered"))
+            .then(
+				//reg => console.log("service worker registered")
+			)
             .catch(err => console.log("service worker not registered"));
     });
 }
