@@ -1,0 +1,439 @@
+<div class="page page-stats" data-name="stats">
+    <div class="navbar ">
+        <div class="navbar-bg"></div>
+        <div class="navbar-inner">
+            <div class="left  no-margin-right">
+                <a href="#" class="link icon-only panel-open " data-panel="left">
+                    <i class="icon f7-icons size-22">bars</i>
+                </a>
+            </div>
+            <div class="title overflow-visible">
+                <div class="item-input-wrap ">
+                    <input type="text" placeholder="Search..." />
+                    <span class="input-clear-button margin-right-half"></span>
+                </div>
+            </div>
+            <div class="right">
+                <a href="/profile/" class="link ">
+                    <div class="tick bg-color-red "></div>
+                    <span class="avatar avatar-36 rounded-circle">
+                        <img src="img/user1.jpg" alt="image title" />
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- main page content -->
+    <div class="page-content has-footer">
+        <!-- summary blocks -->
+        <div class="block">
+            <div class="row">
+                <div class="col-50 medium-25 large-25">
+                    <div class="card elevation-2 margin-bottom">
+                        <div class="card-content card-content-padding">
+                            <div class="row">
+                                <div class="col-auto align-self-center">
+                                    <div class="avatar avatar-40 bg-color-blue text-color-white rounded-circle">
+                                        <i class="icon f7-icons size-20">clock</i>
+                                    </div>
+                                </div>
+                                <div class="col no-padding">
+                                    <h6 class="no-margin-bottom">+155</h6>
+                                    <p class="text-muted small">Hours</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-50 medium-25 large-25">
+                    <div class="card elevation-2 margin-bottom">
+                        <div class="card-content card-content-padding">
+                            <div class="row">
+                                <div class="col-auto align-self-center">
+                                    <div class="avatar avatar-40 bg-color-yellow text-color-white rounded-circle">
+                                        <i class="icon f7-icons size-20">speedometer</i>
+                                    </div>
+                                </div>
+                                <div class="col no-padding">
+                                    <h6 class="no-margin-bottom">+365</h6>
+                                    <p class="text-muted small">Processing</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-50 medium-25 large-25">
+                    <div class="card elevation-2 margin-bottom">
+                        <div class="card-content card-content-padding">
+                            <div class="row">
+                                <div class="col-auto align-self-center">
+                                    <div class="avatar avatar-40 bg-color-green text-color-white rounded-circle">
+                                        <i class="icon f7-icons size-20">folder</i>
+                                    </div>
+                                </div>
+                                <div class="col no-padding">
+                                    <h6 class="no-margin-bottom">+658</h6>
+                                    <p class="text-muted small">Pojects</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-50 medium-25 large-25">
+                    <div class="card elevation-2 margin-bottom">
+                        <div class="card-content card-content-padding">
+                            <div class="row">
+                                <div class="col-auto align-self-center">
+                                    <div class="avatar avatar-40 bg-color-red text-color-white rounded-circle">
+                                        <i class="icon f7-icons size-20">layers</i>
+                                    </div>
+                                </div>
+                                <div class="col no-padding">
+                                    <h6 class="no-margin-bottom">+248</h6>
+                                    <p class="text-muted small">Complete</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chart  -->
+        <div class="block">
+            <div class="row">
+                <div class="col-100 medium-50 large-55">
+                    <div class="card elevation-2 margin-bottom">
+                        <div class="card-header no-border">
+                            <div class="row">
+                                <div class="col align-self-center">
+                                    <p>Information<br><small class="text-muted">(Quarterly)</small></p>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="menu">
+                                        <div class="menu-item menu-item-dropdown">
+                                            <div class="menu-item-content"><i class="f7-icons size-18">line_horizontal_3_decrease</i></div>
+                                            <div class="menu-dropdown menu-dropdown-right">
+                                                <div class="menu-dropdown-content">
+                                                    <a href="#" class="menu-dropdown-link menu-close">Action 1</a>
+                                                    <a href="#" class="menu-dropdown-link menu-close">Action 2</a>
+                                                    <a href="#" class="menu-dropdown-link menu-close color-theme-red">Delete</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="card-content card-content-padding">
+                            <canvas id="barchart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-100 medium-50 large-45">
+                    <!-- progress blocks -->
+                    <div class="row">
+                        <div class="col-100">
+                            <div class="card elevation-2 margin-bottom">
+                                <div class="card-content card-content-padding">
+                                    <div class="row">
+                                        <div class="col-auto">
+                                            <div class="avatar avatar-40 bg-color-green text-color-white rounded-circle">
+                                                    <i class="icon f7-icons size-22">gift</i>
+                                            </div>
+                                        </div>
+                                        <div class="col no-padding-left">
+                                            <h6 class="">Plantation <span class="float-right">1.5 lacs</span></h6>
+                                            <div class="progressbar color-blue h-5 margin-bottom-half" data-progress="45">
+                                                <span></span>
+                                            </div>
+                                            <p class="text-muted small">We have done so many plantation across the city
+                                                and now we will at high</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-100">
+                            <div class="card elevation-2 margin-bottom">
+                                <div class="card-content card-content-padding">
+                                    <div class="row">
+                                        <div class="col-auto">
+                                            <div class="avatar avatar-40 bg-color-blue text-color-white rounded-circle">
+                                                <i class="icon f7-icons size-22">cube_box</i>
+                                            </div>
+                                        </div>
+                                        <div class="col no-padding-left">
+                                            <h6 class="">Transportation <span class="float-right">$ 364</span></h6>
+                                            <div class="progressbar color-green h-5 margin-bottom-half" data-progress="60">
+                                                <span></span>
+                                            </div>
+                                            <p class="text-muted small">There are good amount of transportation still
+                                                pendings are processeing</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- swiper carousel -->
+        <div class="block margin-bottom no-padding">
+            <div class="swiper-container swiperhighlight">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card elevation-2">
+                            <div class="card-content card-content-padding  bg-color-blue text-color-white rounded">
+                                <h2 class="margin-bottom-half"><i class="icon f7-icons">cart</i><span class="display-none">Icon</span></h2>
+                                <h6>Stats of design</h6>
+                            </div>
+                            <div class="card-footer text-align-center no-border">
+                                <button class="button">Invite Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card elevation-2">
+                            <div class="card-content card-content-padding bg-color-red text-color-white rounded">
+                                <h2 class="margin-bottom-half"><i class="icon f7-icons">circle_grid_hex</i><span class="display-none">Icon</span></h2>
+                                <h6>School is the best</h6>
+                            </div>
+                            <div class="card-footer text-align-center no-border">
+                                <button class="button">Invite Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card elevation-2">
+                            <div class="card-content card-content-padding bg-color-yellow text-color-white rounded">
+                                <h2 class="margin-bottom-half"><i class="icon f7-icons">cube_box</i><span class="display-none">Icon</span></h2>
+                                <h6>Law of Gravity</h6>
+                            </div>
+                            <div class="card-footer text-align-center no-border">
+                                <button class="button">Invite Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card elevation-2">
+                            <div class="card-content card-content-padding bg-color-green text-color-white rounded">
+                                <h2 class="margin-bottom-half"><i class="icon f7-icons">folder</i><span class="display-none">Icon</span></h2>
+                                <h6>Stats of design</h6>
+                            </div>
+                            <div class="card-footer text-align-center no-border">
+                                <button class="button">Invite Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card elevation-2">
+                            <div class="card-content card-content-padding bg-color-red text-color-white rounded">
+                                <h2 class="margin-bottom-half"><i class="icon f7-icons">hare</i><span class="display-none">Icon</span></h2>
+                                <h6>School is the best</h6>
+                            </div>
+                            <div class="card-footer text-align-center no-border">
+                                <button class="button">Invite Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card elevation-2">
+                            <div class="card-content card-content-padding bg-color-yellow text-color-white rounded">
+                                <h2 class="margin-bottom-half"><i class="icon f7-icons">house</i><span class="display-none">Icon</span></h2>
+                                <h6>Law of Gravity</h6>
+                            </div>
+                            <div class="card-footer text-align-center no-border">
+                                <button class="button">Invite Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card elevation-2 ">
+                            <div class="card-content card-content-padding bg-color-green text-color-white rounded">
+                                <h2 class="margin-bottom-half"><i class="icon f7-icons">tray_2</i><span class="display-none">Icon</span></h2>
+                                <h6>Stats of design</h6>
+                            </div>
+                            <div class="card-footer text-align-center no-border">
+                                <button class="button">Invite Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- summary blocks -->
+        <div class="block">
+            <div class="row">
+                <div class="col-50 medium-25 large-25">
+                    <div class="card elevation-2 margin-bottom bg-blue-light text-color-black">
+                        <div class="card-content card-content-padding">
+                            <div class="row">
+                                <div class="col-auto">
+                                    <div class="avatar avatar-40 bg-color-blue text-color-white rounded-circle">
+                                        <i class="icon f7-icons size-20">clock</i>
+                                    </div>
+                                </div>
+                                <div class="col no-padding">
+                                    <h6 class="no-margin-bottom">+155</h6>
+                                    <p class="text-muted small">Hours</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-50 medium-25 large-25">
+                    <div class="card elevation-2 margin-bottom bg-yellow-light text-color-black">
+                        <div class="card-content card-content-padding">
+                            <div class="row">
+                                <div class="col-auto">
+                                    <div class="avatar avatar-40 bg-color-yellow text-color-white rounded-circle">
+                                        <i class="icon f7-icons size-20">speedometer</i>
+                                    </div>
+                                </div>
+                                <div class="col no-padding">
+                                    <h6 class="no-margin-bottom">+365</h6>
+                                    <p class="text-muted small">Processing</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-50 medium-25 large-25">
+                    <div class="card elevation-2 margin-bottom bg-green-light text-color-black">
+                        <div class="card-content card-content-padding">
+                            <div class="row">
+                                <div class="col-auto">
+                                    <div class="avatar avatar-40 bg-color-green text-color-white rounded-circle">
+                                        <i class="icon f7-icons size-20">folder</i>
+                                    </div>
+                                </div>
+                                <div class="col no-padding">
+                                    <h6 class="no-margin-bottom">+658</h6>
+                                    <p class="text-muted small">Pojects</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-50 medium-25 large-25">
+                    <div class="card elevation-2 margin-bottom bg-red-light text-color-black">
+                        <div class="card-content card-content-padding">
+                            <div class="row">
+                                <div class="col-auto">
+                                    <div class="avatar avatar-40 bg-color-red text-color-white rounded-circle">
+                                        <i class="icon f7-icons size-20">chart_bar</i>
+                                    </div>
+                                </div>
+                                <div class="col no-padding">
+                                    <h6 class="no-margin-bottom">+248</h6>
+                                    <p class="text-muted small">Complete</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- News and updates -->
+        <div class="block">
+            <div class="row margin-bottom-half">
+                <div class="col">
+                    <h6>News & announcement </h6>
+                </div>
+                <div class="col-auto">
+                    <a class="button" href="blog.html">View all</a>
+                </div>
+            </div>
+        </div>
+        <div class="block">
+            <div class="row">
+                <div class="col-100 medium-50">
+                    <div class="card elevation-2 margin-bottom">
+                        <figure class="card-img-top overflow-hidden no-margin-bottom coverimg h-190"><img
+                                src="img/news.jpg" alt="project images"></figure>
+                        <div class="card-content card-content-padding">
+                            <h6>Do share and Earn a lot</h6>
+                            <p class="text-muted small">Get $10 instant as reward while your friend or invited member
+                                join moiconle ux</p>
+                            <button class="button">Invite now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-100 medium-50">
+                    <div class="card elevation-2 margin-bottom">
+                        <figure class="card-img-top overflow-hidden no-margin-bottom coverimg h-190"><img
+                                src="img/product1.jpg" alt="project images"></figure>
+                        <div class="card-content card-content-padding">
+                            <h6>Earn Rewards of 50% more</h6>
+                            <p class="text-muted small">Get $10 instant as reward while your friend or invited member
+                                join moiconle ux</p>
+                            <a href="/blog-detail/" class="button">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer static -->
+    <footer class="footer">
+        <div class="col-12">
+            <ul>
+                <li>
+                    <a href="/home/">
+                        <span>
+                            <i class="icon f7-icons">house</i>
+                            <span class="nav-text">Home</span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link active" href="/stats/">
+                        <span>
+                            <i class="icon f7-icons">chart_bar</i>
+                            <span class="nav-text">Stats</span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/pinned/">
+                        <span>
+                            <i class="icon f7-icons">bookmark</i>
+                            <span class="nav-text">Pinned</span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/style/">
+                        <span>
+                            <i class="icon f7-icons">circle_grid_hex</i>
+                            <span class="nav-text">Style</span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/profile/">
+                        <span>
+                            <i class="icon f7-icons">person</i>
+                            <span class="nav-text">Profile</span>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+</div>

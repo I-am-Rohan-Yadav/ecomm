@@ -1,0 +1,694 @@
+<template>
+  <div class="page page-home" data-name="home">
+    <div class="navbar ">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner">
+        <div class="left  no-margin-right">
+          <a href="#" class="link icon-only panel-open " data-panel="left">
+            <i class="icon f7-icons size-22">bars</i>
+          </a>
+        </div>
+        <div class="title overflow-visible">
+          <div class="item-input-wrap ">
+            <input type="text" placeholder="Search..." />
+            <span class="input-clear-button margin-right-half"></span>
+          </div>
+        </div>
+        <div class="right">
+          <a href="/profile/" class="link ">
+            <div class="tick bg-color-red "></div>
+            <span class="avatar avatar-36 rounded-circle">
+              <img src="img/user1.jpg" alt="image title" />
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="page-content has-footer">
+
+      <div class="block">
+        <h2 class="margin-bottom-half margin-top-half">Hello!<br />Mobile<span class="text-color-theme">UX</span>ER</h2>
+      </div>
+
+      <!-- welcome message and notifications lead -->
+      <div class="block">
+        <div class="row">
+          <div class="col-auto">
+            <h1 class="position-relative">
+              <div class="tick bg-color-red margin-top-half"></div>
+              <i class="f7-icons size-32 text-color-theme">bell</i>
+            </h1>
+          </div>
+          <div class="col align-self-center no-padding-left">
+            <p class="m-0 text-muted small">You have great day<br />3 notifications </p>
+          </div>
+        </div>
+        <br />
+      </div>
+
+      <!-- Chart and Circular progress -->
+      <div class="block">
+        <div class="row">
+          <div class="col-100 medium-80 large-60">
+            <div class="card elevation-2 margin-bottom">
+              <div class="card-header border-0">
+                <div class="row">
+                  <div class="col align-self-center">
+                    <p class="my-0">Statistics <small class="text-muted">(Daily Progress)</small></p>
+                  </div>
+                  <div class="col-auto">
+                    <div class="menu">
+                      <div class="menu-item menu-item-dropdown">
+                        <div class="menu-item-content"><i class="f7-icons size-18">line_horizontal_3_decrease</i></div>
+                        <div class="menu-dropdown menu-dropdown-right">
+                          <div class="menu-dropdown-content">
+                            <a href="#" class="menu-dropdown-link menu-close">Action 1</a>
+                            <a href="#" class="menu-dropdown-link menu-close">Action 2</a>
+                            <a href="#" class="menu-dropdown-link menu-close color-theme-red">Delete</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="card-content card-content-padding">
+                <canvas id="areachart"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class="col-100 medium-20 large-40">
+            <div class="row">
+              <div class="col-50 medium-100">
+                <div class="card elevation-2 text-align-center margin-bottom">
+                  <div class="card-content card-content-padding">
+                    <div id="progressCircle1" class="progressCircle margin-bottom-half"></div>
+                    <h6 class="mb-1">34251</h6>
+                    <p class="text-muted small">Joined</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-50  medium-100">
+                <div class="card elevation-2 text-align-center margin-bottom">
+                  <div class="card-content card-content-padding">
+                    <div id="progressCircle2" class="progressCircle margin-bottom-half"></div>
+                    <h6 class="mb-1">6588</h6>
+                    <p class="text-muted small">Design Betch</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Dark mode switch -->
+      <div class="block">
+        <div class="row">
+          <div class="col-100">
+            <div class="card elevation-2 margin-bottom">
+              <div class="card-content card-content-padding">
+                <div class="row">
+                  <div class="col-auto">
+                    <label class="toggle toggle-init">
+                      <input type="checkbox" name="toggle" value="yes" id="darkmode" /><i class="toggle-icon"></i>
+                    </label>
+                  </div>
+                  <div class="col align-self-center no-padding-left"><label for="darkmode">Activate Dark Mode</label></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- swiper carousel -->
+      <div class="block">
+        <div class="row">
+          <div class="col-100 margin-bottom no-padding">
+            <div class="swiper-container swiperhighlight swiper-init">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="card elevation-2 bg-color-blue text-color-white">
+                    <div class="card-content card-content-padding">
+                      <h2 class="margin-bottom-half"><i class="f7-icons">cart</i><span class="display-none">Icon</span></h2>
+                      <h6>Stats of design</h6>
+                      <p class="text-muted small">12 Joined</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card elevation-2 bg-color-red text-color-white">
+                    <div class="card-content card-content-padding">
+                      <h2 class="margin-bottom-half"><i class="f7-icons">wand_stars_inverse</i><span class="display-none">Icon</span></h2>
+                      <h6>School is the best</h6>
+                      <p class="text-muted small">12 Joined</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card elevation-2 bg-color-orange text-color-white">
+                    <div class="card-content card-content-padding">
+                      <h2 class="margin-bottom-half"><i class="f7-icons size-32">snow</i><span class="display-none">Icon</span></h2>
+                      <h6>Law of Gravity</h6>
+                      <p class="text-muted small">12 Joined</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card elevation-2 bg-color-green text-color-white">
+                    <div class="card-content card-content-padding">
+                      <h2 class="margin-bottom-half"><i class="f7-icons">slider_horizontal_3</i><span class="display-none">Icon</span></h2>
+                      <h6>Stats of design</h6>
+                      <p class="text-muted small">12 Joined</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card elevation-2 bg-color-purple text-color-white">
+                    <div class="card-content card-content-padding">
+                      <h2 class="margin-bottom-half"><i class="f7-icons">suit_spade</i><span class="display-none">Icon</span></h2>
+                      <h6>School is the best</h6>
+                      <p class="text-muted small">12 Joined</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card elevation-2 bg-color-lightblue text-color-white">
+                    <div class="card-content card-content-padding">
+                      <h2 class="margin-bottom-half"><i class="f7-icons size-32">tortoise</i><span class="display-none">Icon</span></h2>
+                      <h6>Law of Gravity</h6>
+                      <p class="text-muted small">12 Joined</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card elevation-2 bg-color-pink text-color-white">
+                    <div class="card-content card-content-padding">
+                      <h2 class="margin-bottom-half"><i class="f7-icons">cart</i><span class="display-none">Icon</span></h2>
+                      <h6>Stats of design</h6>
+                      <p class="text-muted small">12 Joined</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Appreaciation banner with chart -->
+      <div class="block">
+        <div class="row">
+          <div class="col-100 medium-50">
+            <div class="card elevation-2 margin-bottom">
+              <div class="card-content card-content-padding">
+                <div class="row">
+                  <div class="col-65">
+                    <h6>Excellent work</h6>
+                    <p class="text-muted small">You are on the right place and right track. Good luck</p>
+                  </div>
+                  <div class="col-35 align-self-center">
+                    <canvas id="smallchart1" class="smallchart"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-100 medium-50">
+            <div class="card elevation-2 margin-bottom">
+              <div class="card-content card-content-padding">
+                <div class="row">
+                  <div class="col-35 align-self-center">
+                    <canvas id="smallchart2" class="smallchart"></canvas>
+                  </div>
+                  <div class="col-65">
+                    <h6>Much Appreaciated</h6>
+                    <p class="text-muted small">You are on the right place and right track. Good luck</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trending Projects carousel -->
+      <div class="block margin-bottom-half">
+        <div class="row">
+          <div class="col align-self-center">
+            <h6>Trending Projects </h6>
+          </div>
+          <div class="col-auto align-self-center no-padding">
+            <a class="button" href="projects.html">View all</a>
+          </div>
+          <div class="col-auto">
+            <div class="menu">
+              <div class="menu-item menu-item-dropdown">
+                <div class="menu-item-content"><i class="f7-icons size-18">line_horizontal_3_decrease</i></div>
+                <div class="menu-dropdown menu-dropdown-right">
+                  <div class="menu-dropdown-content">
+                    <a href="#" class="menu-dropdown-link menu-close">Action 1</a>
+                    <a href="#" class="menu-dropdown-link menu-close">Action 2</a>
+                    <a href="#" class="menu-dropdown-link menu-close color-theme-red">Delete</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="block">
+        <div class="row">
+          <div class="col-100 no-padding">
+            <div class="swiper-container swiperprojects margin-bottom">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="card elevation-2">
+                    <div class="fab fab-right-top color-lightblue">
+                      <a href="#">
+                        <i class="icon f7-icons">plus</i>
+                        <i class="icon f7-icons">xmark</i>
+                      </a>
+                      <div class="fab-buttons fab-buttons-left">
+                        <a href=""><i class="icon f7-icons size-22">arrowshape_turn_up_right</i></a>
+                        <a href=""><i class="icon f7-icons size-22">at</i></a>
+                        <a href=""><i class="icon f7-icons size-22">bubble_left</i></a>
+                      </div>
+                    </div>
+
+                    <figure class="card-img-top overflow-hidden no-margin-bottom coverimg"><img src="img/project1.jpg"
+                        alt="project images" /></figure>
+                    <div class="card-content card-content-padding">
+                      <div class="row">
+                        <div class="col-auto align-self-center">
+                          <div id="progressCircle3" class="progressCircle"></div>
+                        </div>
+                        <div class="col align-self-center no-padding-left">
+                          <p class="text-uppercase text-muted no-margin-bottom">Case Study</p>
+                          <h3 class="no-margin-bottom">34251</h3>
+                          <p class="small text-muted">Views</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card elevation-2">
+                    <div class="fab fab-right-top color-lightblue">
+                      <a href="#">
+                        <i class="icon f7-icons">plus</i>
+                        <i class="icon f7-icons">xmark</i>
+                      </a>
+                      <div class="fab-buttons fab-buttons-left">
+                        <a href=""><i class="icon f7-icons size-22">arrowshape_turn_up_right</i></a>
+                        <a href=""><i class="icon f7-icons size-22">at</i></a>
+                        <a href=""><i class="icon f7-icons size-22">bubble_left</i></a>
+                      </div>
+                    </div>
+                    <figure class="card-img-top overflow-hidden no-margin-bottom coverimg"><img src="img/project2.jpg"
+                        alt="project images" /></figure>
+                    <div class="card-content card-content-padding">
+                      <div class="row">
+                        <div class="col-auto align-self-center">
+                          <div id="progressCircle4" class="progressCircle"></div>
+                        </div>
+                        <div class="col align-self-center no-padding-left">
+                          <p class="text-uppercase text-muted no-margin-bottom">Case Study</p>
+                          <h3 class="no-margin-bottom">34251</h3>
+                          <p class="small text-muted">Views</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card elevation-2">
+                    <div class="fab fab-right-top color-lightblue">
+                      <a href="#">
+                        <i class="icon f7-icons">plus</i>
+                        <i class="icon f7-icons">xmark</i>
+                      </a>
+                      <div class="fab-buttons fab-buttons-left">
+                        <a href=""><i class="icon f7-icons size-22">arrowshape_turn_up_right</i></a>
+                        <a href=""><i class="icon f7-icons size-22">at</i></a>
+                        <a href=""><i class="icon f7-icons size-22">bubble_left</i></a>
+                      </div>
+                    </div>
+                    <figure class="card-img-top overflow-hidden no-margin-bottom coverimg"><img src="img/project3.jpg"
+                        alt="project images" /></figure>
+                    <div class="card-content card-content-padding">
+                      <div class="row">
+                        <div class="col-auto align-self-center">
+                          <div id="progressCircle5" class="progressCircle"></div>
+                        </div>
+                        <div class="col align-self-center no-padding-left">
+                          <p class="text-uppercase text-muted  no-margin-bottom">Case Study</p>
+                          <h3 class=" no-margin-bottom">34251</h3>
+                          <p class="small text-muted">Views</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card elevation-2">
+                    <div class="fab fab-right-top color-lightblue">
+                      <a href="#">
+                        <i class="icon f7-icons">plus</i>
+                        <i class="icon f7-icons">xmark</i>
+                      </a>
+                      <div class="fab-buttons fab-buttons-left">
+                        <a href=""><i class="icon f7-icons size-22">arrowshape_turn_up_right</i></a>
+                        <a href=""><i class="icon f7-icons size-22">at</i></a>
+                        <a href=""><i class="icon f7-icons size-22">bubble_left</i></a>
+                      </div>
+                    </div>
+                    <figure class="card-img-top overflow-hidden no-margin-bottom coverimg"><img src="img/project1.jpg"
+                        alt="project images" /></figure>
+                    <div class="card-content card-content-padding">
+                      <div class="row">
+                        <div class="col-auto align-self-center">
+                          <div id="progressCircle6" class="progressCircle"></div>
+                        </div>
+                        <div class="col align-self-center no-padding-left">
+                          <p class="text-uppercase text-muted  no-margin-bottom">Case Study</p>
+                          <h3 class=" no-margin-bottom">34251</h3>
+                          <p class="small text-muted">Views</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- list host players -->
+      <div class="block">
+        <div class="row">
+          <div class="col-100">
+            <div class="card elevation-2 margin-bottom">
+              <div class="card-header">
+                <div class="row">
+                  <div class="col">
+                    <h6>Host Players</h6>
+                  </div>
+                  <div class="col-auto">
+                    <a class="button" href="projects.html">View all</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card-content no-padding">
+                <div class="list media-list">
+                  <ul>
+                    <li class="item-content">
+                      <div class="item-media">
+                        <figure class="avatar avatar-50 rounded-circle">
+                          <img src="img/user1.jpg" alt="" />
+                        </figure>
+                      </div>
+                      <div class="item-inner">
+                        <div class="row">
+                          <div class="col">
+                            <p>Ajinkya McMohan<br /><small class="text-muted">52540 USD</small></p>
+                          </div>
+                          <div class="col-auto text-align-right">
+                            <p>
+                              <small class="text-muted">Online</small>
+                              <br /><small class="text-color-green">+500 USD</small>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content">
+                      <div class="item-media">
+                        <figure class="avatar avatar-50 rounded-circle">
+                          <img src="img/user2.jpg" alt="" />
+                        </figure>
+                      </div>
+                      <div class="item-inner">
+                        <div class="row">
+                          <div class="col">
+                            <p>Elizabeth Secondone<br /><small class="text-muted">52540 USD</small></p>
+                          </div>
+                          <div class="col-auto text-align-right">
+                            <p>
+                              <small class="text-muted">Online</small>
+                              <br /><small class="text-color-red">-215 USD</small>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content">
+                      <div class="item-media">
+                        <figure class="avatar avatar-50 rounded-circle">
+                          <img src="img/user3.jpg" alt="" />
+                        </figure>
+                      </div>
+                      <div class="item-inner">
+                        <div class="row">
+                          <div class="col">
+                            <p>Jonathan<br /><small class="text-muted">52540 USD</small></p>
+                          </div>
+                          <div class="col-auto text-align-right">
+                            <p>
+                              <small class="text-muted">Online</small>
+                              <br /><small class="text-color-red">-300 USD</small>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content">
+                      <div class="item-media">
+                        <figure class="avatar avatar-50 rounded-circle">
+                          <img src="img/user1.jpg" alt="" />
+                        </figure>
+                      </div>
+                      <div class="item-inner">
+                        <div class="row">
+                          <div class="col">
+                            <p>Krish Mehta<br /><small class="text-muted">52540 USD</small></p>
+                          </div>
+                          <div class="col-auto text-align-right">
+                            <p>
+                              <small class="text-muted">Online</small>
+                              <br /><small class="text-color-green">+500 USD</small>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event list -->
+      <div class="block margin-bottom-half">
+        <div class="row mb-2">
+          <div class="col">
+            <h6>Top Events </h6>
+          </div>
+          <div class="col-auto">
+            <a class="button" href="events.html">View all</a>
+          </div>
+        </div>
+      </div>
+      <div class="block">
+        <div class="row">
+          <div class="col-100 medium-50">
+            <div class="card margin-bottom elevation-2">
+              <div class="card-header">
+                <div class="row ">
+                  <div class="col-auto">
+                    <div class="avatar avatar-40 rounded-circle text-color-red bg-red-light">
+                      <i class="icon f7-icons size-22">calendar</i>
+                    </div>
+                  </div>
+                  <div class="col align-self-center no-padding-left">
+                    <h6>Reminder</h6>
+                  </div>
+                  <div class="col-auto align-self-center text-end">
+                    <button class="button">Join Event</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card-content card-content-padding">
+                <h6 class="text-color-blue ">Great Gatsby Event</h6>
+                <p class="text-muted">Lorem ipsum dolor sit amet, consec tetur
+                  dipisicing elit, sed eiusmod exercitation ullamco.</p>
+                <div class="row margin-top">
+                  <div class="col-auto">
+                    <figure class="avatar avatar-50 rounded-circle">
+                      <img src="img/user1.jpg" alt="Generic placeholder image" />
+                    </figure>
+                    <figure class="avatar avatar-50 rounded-circle">
+                      <img src="img/user2.jpg" alt="Generic placeholder image" />
+                    </figure>
+                    <figure class="avatar avatar-50 rounded-circle">
+                      <img src="img/user3.jpg" alt="Generic placeholder image" />
+                    </figure>
+                  </div>
+                  <div class="col align-self-center no-padding-left">
+                    <h6 class="no-margin">6 Friends</h6>
+                    <p class="small text-muted">2546 Others</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col">
+                    <div class="row ">
+                      <div class="col-auto align-self-center">
+                        <i class="icon f7-icons size-22">map_pin_ellipse</i>
+                      </div>
+                      <div class="col no-padding-left">
+                        <h6 class="no-margin text-color-blue">Location</h6>
+                        <p class="text-muted small">UXSO NY, US</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="row">
+                      <div class="col-auto align-self-center">
+                        <i class="icon f7-icons size-22">calendar</i>
+                      </div>
+                      <div class="col no-padding-left">
+                        <h6 class="no-margin text-color-blue">Date</h6>
+                        <p class="text-muted small">Oct 17, 2018</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-100 medium-50">
+            <div class="card margin-bottom elevation-2">
+              <div class="card-header">
+                <div class="row ">
+                  <div class="col-auto">
+                    <div class="avatar avatar-40 rounded-circle text-color-red bg-red-light">
+                      <i class="icon f7-icons size-22">calendar</i>
+                    </div>
+                  </div>
+                  <div class="col align-self-center no-padding-left">
+                    <h6>Reminder</h6>
+                  </div>
+                  <div class="col-auto align-self-center">
+                    <button class="button">Join Event</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card-content card-content-padding z-index-1">
+                <h6 class="text-color-blue ">New launch event</h6>
+                <p class="text-muted">Lorem ipsum dolor sit amet, consec tetur
+                  dipisicing elit, sed eiusmod exercitation ullamco.</p>
+                <div class="row margin-top">
+                  <div class="col-auto">
+                    <div class="avatar-group">
+                      <figure class="avatar avatar-50 rounded-circle">
+                        <img src="img/user1.jpg" alt="Generic placeholder image" />
+                      </figure>
+                      <figure class="avatar avatar-50 rounded-circle">
+                        <img src="img/user2.jpg" alt="Generic placeholder image" />
+                      </figure>
+                      <figure class="avatar avatar-50 rounded-circle">
+                        <img src="img/user3.jpg" alt="Generic placeholder image" />
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="col align-self-center no-padding-left">
+                    <h6 class="no-margin">5 Friends</h6>
+                    <p class="small text-muted">2546 Others</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-30">
+                    <p>
+                      <i class="icon f7-icons size-22 margin-right-half">map_pin_ellipse</i>
+                      <span class="text-muted small">US</span>
+                    </p>
+                  </div>
+                  <div class="col-35">
+                    <p>
+                      <i class="icon f7-icons size-22 margin-right-half">calendar</i>
+                      <span class="text-muted small">22 Jun</span>
+                    </p>
+                  </div>
+                  <div class="col-35">
+                    <p>
+                      <i class="icon f7-icons size-22 margin-right-half">clock</i>
+                      <span class="text-muted small">01:01am</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- footer static -->
+    <footer class="footer">
+      <div class="container">
+        <ul>
+          <li>
+            <a class="active" href="/home/">
+              <span>
+                <i class="icon f7-icons">house</i>
+                <span class="nav-text">Home</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="/stats/">
+              <span>
+                <i class="icon f7-icons">chart_bar</i>
+                <span class="nav-text">Stats</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="/pinned/">
+              <span>
+                <i class="icon f7-icons">bookmark</i>
+                <span class="nav-text">Pinned</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="/style/" class="item-link">
+              <span>
+                <i class="icon f7-icons">circle_grid_hex</i>
+                <span class="nav-text">Style</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="/profile/">
+              <span>
+                <i class="icon f7-icons">person</i>
+                <span class="nav-text">Profile</span>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+</template>
