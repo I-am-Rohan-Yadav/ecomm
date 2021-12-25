@@ -1,7 +1,13 @@
 var routes = [
   {
     path: '/',
-    componentUrl: './shopapp/home.html',
-    name: 'Home',
+    componentUrl: './shopapp/splash.html',
+    name: 'splash',
   },
+  // home page route
+  {
+    path: '/home/',
+    componentUrl: './shopapp/home.html',
+    name: 'home',
+  }, 
 ];

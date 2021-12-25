@@ -31,6 +31,9 @@ var app = new Framework7({
 });
 
 $(document).on('page:init', '.page[data-name="splash"]', function (e) {
-	
+  //  load home page after a 2 second timeout of splash page reload
+  setTimeout(function () {
+    app.views.main.router.navigate('/home/');
+  }, 2000);
 })
 
